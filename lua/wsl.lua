@@ -1,0 +1,1 @@
+opt.clipboard = 'unnamedplus'

@@ -22,7 +22,8 @@ ts.setup {
     'svelte',
     'typescript',
     'yaml',
-    'vue'
+    'vue',
+    'pug'
   },
   autotag = { 
     enable = true

@@ -25,3 +25,9 @@ set('n', 'sv', ':vsplit<Return><C-w>w', silent)
 -- Buffers
 set('n', 'bn', ':bnext<CR>', silent)
 set('n', 'bp', ':bprevious<CR>', silent)
+
+-- Avoid Esc
+set('i', '<M-i>', '<ESC>', {
+  silent = true,
+  noremap = true
+})

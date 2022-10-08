@@ -1,4 +1,5 @@
 -- Shorter options
+local g = vim.g
 opt = vim.opt
 wo  = vim.wo
 cmd = vim.cmd
@@ -13,6 +14,9 @@ opt.encoding       = 'utf-8'
 opt.fileencoding   = 'utf-8'
 
 -- General options
+g.loaded = 1
+g.loaded_netrwPlugin = 1
+
 wo.number      = true
 
 opt.title       = true
@@ -38,8 +42,11 @@ opt.backspace   = 'start,eol,indent'
 opt.path:append { '**' } -- Finding files
 opt.wildignore:append { '*/node_modules/*' } 
 
--- Asterisks in block comments
-opt.formatoptions:append { 'r' } 
+-- Disable automatic commenting when pressing Return key
+api.nvim_create_autocmd('FileType', {
+  pattern = '*',
+  command = 'set formatoptions-=c  formatoptions-=r'
+})
 
 -- Only paste at Insert mode
 api.nvim_create_autocmd("InsertLeave", {

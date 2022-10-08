@@ -12,7 +12,7 @@ cmp.setup({
   mapping = cmp.mapping.preset.insert({
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-u>'] = cmp.mapping.scroll_docs(4),
-    ['q'] = cmp.mapping.close(),
+    ['<C-c>'] = cmp.mapping.close(),
     ['<CR>']  = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true

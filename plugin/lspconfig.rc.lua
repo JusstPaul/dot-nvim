@@ -54,7 +54,6 @@ nvim_lsp.svelte.setup {
 }
 
 ---- Vue
-
 nvim_lsp.volar.setup {
   on_attach = on_attach,
   filetypes = {
